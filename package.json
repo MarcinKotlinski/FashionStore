@@ -17,12 +17,21 @@
   },
   "homepage": "https://github.com/MarcinKotlinski/FashionStore#readme",
   "devDependencies": {
+    "browser-sync": "^2.24.5",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-imagemin": "^4.1.0",
     "gulp-jshint": "^2.1.0",
     "gulp-rename": "^1.3.0",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
-    "jshint": "^2.9.5"
+    "gulp-watch": "^5.0.0",
+    "imagemin-pngquant": "^5.1.0",
+    "jshint": "^2.9.5",
+    "rimraf": "^2.6.2"
   }
 }

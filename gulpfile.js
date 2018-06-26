@@ -2,11 +2,22 @@
 var gulp = require('gulp');
 
 // Include Our Plugins
-var jshint = require('gulp-jshint');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+var jshint = require('gulp-jshint'),
+sass = require('gulp-sass'),
+rename = require('gulp-rename'),
+watch = require('gulp-watch'),
+concat = require('gulp-concat'),
+prefixer = require('gulp-autoprefixer'),
+uglify = require('gulp-uglify'),
+babel = require('gulp-babel'),
+less = require('gulp-less'),
+fileinclude = require('gulp-file-include'),
+cleanCSS = require('gulp-clean-css'),
+imagemin = require('gulp-imagemin'),
+pngquant = require('imagemin-pngquant'),
+rimraf = require('rimraf'),
+browserSync = require("browser-sync"),
+reload = browserSync.reload;
 
 // Lint Task
 gulp.task('lint', function() {
