@@ -10,7 +10,6 @@ concat = require('gulp-concat'),
 prefixer = require('gulp-autoprefixer'),
 uglify = require('gulp-uglify'),
 babel = require('gulp-babel'),
-less = require('gulp-less'),
 fileinclude = require('gulp-file-include'),
 cleanCSS = require('gulp-clean-css'),
 imagemin = require('gulp-imagemin'),
@@ -18,6 +17,33 @@ pngquant = require('imagemin-pngquant'),
 rimraf = require('rimraf'),
 browserSync = require("browser-sync"),
 reload = browserSync.reload;
+
+
+var path = {
+    build: {
+        html: 'dist/',
+        js: 'dist/js/',
+        css: 'dist/css/',
+        img: 'dist/images/',
+        fonts: 'dist/fonts/'
+    },
+    src: {
+        html: 'src/*.html',
+        js: 'src/**/*.js',
+        style: 'src/style/main.less',
+        img: 'src/images/**/*.*',
+        fonts: 'src/fonts/**/*.*'
+    },
+    watch: {
+        html: 'src/**/*.html',
+        js: 'src/**/*.js',
+        style: 'src/style/**/*.less',
+        img: 'src/img/**/*.*',
+        fonts: 'src/fonts/**/*.*'
+    },
+    clean: './dist'
+};
+
 
 // Lint Task
 gulp.task('lint', function() {
@@ -27,10 +53,14 @@ gulp.task('lint', function() {
 });
 
 // Compile Our Sass
-gulp.task('sass', function() {
-    return gulp.src('scss/*.scss')
+/* building styles */
+gulp.task('style:build', function () {
+    gulp.src(path.src.style)
         .pipe(sass())
-        .pipe(gulp.dest('dist/css'));
+        .pipe(prefixer())
+        .pipe(cleanCSS())
+        .pipe(gulp.dest(path.build.css))
+        .pipe(reload({stream: true}));
 });
 
 // Concatenate & Minify JS
