@@ -1,24 +1,22 @@
-// Include gulp
-var gulp = require('gulp');
+'use strict';
 
-// Include Our Plugins
-var jshint = require('gulp-jshint'),
-sass = require('gulp-sass'),
-rename = require('gulp-rename'),
-watch = require('gulp-watch'),
-concat = require('gulp-concat'),
-prefixer = require('gulp-autoprefixer'),
-uglify = require('gulp-uglify'),
-babel = require('gulp-babel'),
-fileinclude = require('gulp-file-include'),
-cleanCSS = require('gulp-clean-css'),
-imagemin = require('gulp-imagemin'),
-pngquant = require('imagemin-pngquant'),
-rimraf = require('rimraf'),
-browserSync = require("browser-sync"),
-reload = browserSync.reload;
+/* package dependencies */
+var gulp = require('gulp'),
+    watch = require('gulp-watch'),
+    concat = require('gulp-concat'),
+    prefixer = require('gulp-autoprefixer'),
+    uglify = require('gulp-uglify'),
+    babel = require('gulp-babel'),
+    sass = require('gulp-sass'),
+    fileinclude = require('gulp-file-include'),
+    cleanCSS = require('gulp-clean-css'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+    rimraf = require('rimraf'),
+    browserSync = require("browser-sync"),
+    reload = browserSync.reload;
 
-
+/* path variables */
 var path = {
     build: {
         html: 'dist/',
@@ -30,29 +28,49 @@ var path = {
     src: {
         html: 'src/*.html',
         js: 'src/**/*.js',
-        style: 'src/style/main.less',
+        style: 'src/style/main.sass',
         img: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/**/*.js',
-        style: 'src/style/**/*.less',
+        style: 'src/style/**/*.sass',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './dist'
 };
 
+/* server configuration */
+var config = {
+    server: {
+        baseDir: "./dist"
+    },
+    tunnel: true,
+    host: 'localhost',
+    port: 9000,
+    logPrefix: "blueMedia_test"
+};
 
-// Lint Task
-gulp.task('lint', function() {
-    return gulp.src('js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
+gulp.task('html:build', function() {
+    gulp.src(path.src.html)
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest(path.build.html))
+        .pipe(reload({stream: true}));
 });
 
-// Compile Our Sass
+/* building javascript */
+gulp.task('js:build', function () {
+    gulp.src(path.src.js)
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream: true}));
+});
+
 /* building styles */
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
@@ -63,21 +81,62 @@ gulp.task('style:build', function () {
         .pipe(reload({stream: true}));
 });
 
-// Concatenate & Minify JS
-gulp.task('scripts', function() {
-    return gulp.src('js/*.js')
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
-        .pipe(rename('all.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+/* building images */
+gulp.task('image:build', function () {
+    gulp.src(path.src.img)
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()],
+            interlaced: true
+        }))
+        .pipe(gulp.dest(path.build.img))
+        .pipe(reload({stream: true}));
 });
 
-// Watch Files For Changes
-gulp.task('watch', function() {
-    gulp.watch('js/*.js', ['lint', 'scripts']);
-    gulp.watch('scss/*.scss', ['sass']);
+/* building fonts */
+gulp.task('fonts:build', function() {
+    gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.build.fonts))
 });
 
-// Default Task
-gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);
+/* build sequency */
+gulp.task('build', [
+    'html:build',
+    'js:build',
+    'style:build',
+    'fonts:build',
+    'image:build'
+]);
+
+/* tasks watcher */
+gulp.task('watch', function(){
+    watch([path.watch.html], function(event, cb) {
+        gulp.start('html:build');
+    });
+    watch([path.watch.style], function(event, cb) {
+        gulp.start('style:build');
+    });
+    watch([path.watch.js], function(event, cb) {
+        gulp.start('js:build');
+    });
+    watch([path.watch.img], function(event, cb) {
+        gulp.start('image:build');
+    });
+    watch([path.watch.fonts], function(event, cb) {
+        gulp.start('fonts:build');
+    });
+});
+
+/* webserver task */
+gulp.task('webserver', function () {
+    browserSync(config);
+});
+
+/* cleaner task */
+gulp.task('clean', function (cb) {
+    rimraf(path.clean, cb);
+});
+
+/* default gulp task */
+gulp.task('default', ['build', 'webserver', 'watch']);

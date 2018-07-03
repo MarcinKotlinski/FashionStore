@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/MarcinKotlinski/FashionStore#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "browser-sync": "^2.24.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
