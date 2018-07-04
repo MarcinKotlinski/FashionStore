@@ -1,0 +1,162 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
+.top-menu {
+
+  .holder {
+    width: 1150px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .row {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+  }
+
+  .column {
+    @include top_columns;
+    float: left;
+    padding: 15px 0;
+    width: 33%;
+    text-transform: uppercase;
+    border: 1px solid $border;
+    border-left: none;
+  }
+
+  #logo-line {
+    display: table;
+    width: 100%;
+
+    .logo {
+      padding: 25px;
+      background: #fff;
+      float: left;
+      margin-right: 50px;
+    }
+
+    .search-engine {
+      float: left;
+      margin-top: 40px;
+      padding: 20px 16px;
+      padding-right: 0;
+      border: 1px solid $border;
+      ul {
+        li {
+          @include top_columns;
+          display: inline;
+        }
+        li:first-child:after {
+          content: "|";
+          margin-left: 240px;
+          margin-right: 30px;
+        }
+        li:nth-child(2):after {
+          content: url("../../images/rozwinięcie.png");
+          margin-left: 40px;
+          margin-right: 30px;
+        }
+        li:nth-child(3) {
+          padding: 22px 30px;
+          background: $red;
+        }
+        li:nth-child(3):hover {
+          background: red;
+        }
+      }
+    }
+  }
+  .tab {
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    @include gotham_medium;
+    margin-right: 29px;
+    background-color: inherit;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  .last {
+    margin-left: 40px;
+    background-color: $red !important;
+    text-transform: none;
+  }
+  .last{
+    button:hover{
+      background-color: red !important;
+    }
+  }
+  /* Change background color of buttons on hover */
+  .tab {
+    button:hover {
+      border-bottom: 3px solid $red;
+    }
+    button.active {
+      border-bottom: 3px solid $red;
+    }
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  .fade {
+    position: relative;
+    background: url("../../images/banner top.png") no-repeat;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+    .content {
+      top: 50%;
+      h4 {
+        @include gotham_medium;
+        font-size: 25px;
+        margin-top: 146px;
+      }
+      h3 {
+        @include gotham_medium;
+        font-size: 85px;
+      }
+      h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 34px;
+        font-style: italic;
+      }
+      p {
+        @include gotham_medium;
+        font-weight: bold;
+        font-size: 42px;
+        margin-bottom: 259px;
+      }
+    }
+  }
+  .arrow-right{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .arrow-left{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+

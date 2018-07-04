@@ -1,0 +1,16 @@
+@import "variables";
+
+@mixin top_columns{
+  font-size: $font-body;
+  color: $topColumn;
+  word-spacing: 1px;
+  text-align: center;
+}
+
+@mixin gotham_medium{
+  font-family: "Gotham Light", serif;
+  font-weight: normal;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}

@@ -50,7 +50,7 @@ var config = {
     tunnel: true,
     host: 'localhost',
     port: 9000,
-    logPrefix: "blueMedia_test"
+    logPrefix: "FashionStore"
 };
 
 gulp.task('html:build', function() {

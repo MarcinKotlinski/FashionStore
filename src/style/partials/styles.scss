@@ -1,0 +1,33 @@
+@import "variables";
+
+/* main styles */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  min-width: 1200px;
+}
+
+body {
+  background: $body-bg;
+  font: $font-body 'Gotham', Arial, Helvetica, sans-serif;
+  color: $topColumn;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+#wrapper {
+  width: 100%;
+}
+
+.container {
+  width: 1150px;
+  margin: 0 auto;
+  position: relative;
+}
