@@ -1,0 +1,44 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
+.blog-box {
+    padding: 50px 0;
+    border-top: 1px solid $border;
+    color: $darker-words;
+
+    .blog_header {
+        @include header;
+        margin-left: 18px;
+    }
+
+    .blog-gallery {
+        content: "";
+        display: table;
+        clear: both;
+        width: 100%;
+
+        .col {
+            float: left;
+            width: 30%;
+            padding: 0 19px;
+            .text-wrapper{
+                position: relative;
+            }
+        }
+
+        h2{
+            text-align: left;
+            font-size: 15px;
+            text-transform: uppercase;
+            padding: 30px 10px 0 10px;
+        }
+
+        p{
+            text-align: left;
+            padding: 30px 10px 0 10px;
+            font-size: 15px;
+            font-weight: lighter;
+        }
+
+    }
+}

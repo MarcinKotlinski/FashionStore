@@ -1,16 +1,67 @@
 @import "variables";
 
-@mixin top_columns{
-  font-size: $font-body;
-  color: $topColumn;
-  word-spacing: 1px;
-  text-align: center;
+@mixin top_columns {
+    font-size: $font-body;
+    color: $topColumn;
+    word-spacing: 1px;
+    text-align: center;
 }
 
-@mixin gotham_medium{
-  font-family: "Gotham Light", serif;
-  font-weight: normal;
-  font-size: 15px;
-  text-transform: uppercase;
-  color: #fff;
+@mixin gotham_medium {
+    font-family: "Gotham Light", serif;
+    font-weight: normal;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@mixin category_img {
+    font-family: "Gotham Medium", serif;
+    color: #fff;
+
+    h2 {
+        font-size: 28px;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-size: 15px;
+        background: $red;
+        padding: 14px;
+        font-weight: lighter;
+    }
+}
+
+@mixin footer_ul {
+    color: $darker-words;
+    text-align: left;
+
+    h2{
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    ul{
+        li{
+            display: block;
+            line-height: 30px;
+            font-weight: lighter;
+        }
+    }
+}
+
+@mixin header {
+    width: fit-content;
+    padding-bottom: 10px;
+    padding-right: 70px;
+    border-bottom: 1px solid #6b6b6b;
+    color: #444;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+@mixin blog-gallery {
+    
 }

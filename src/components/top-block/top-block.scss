@@ -1,0 +1,74 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
+.top-block {
+    .fast-list {
+        display: table;
+        width: 100%;
+        margin-bottom: 50px;
+
+        ul {
+            li {
+                display: inline;
+            }
+
+            li:after {
+                content: ':';
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            li:last-child:after {
+                content: none;
+            }
+
+            li:first-child:after {
+                content: url("../../images/next.png");
+            }
+        }
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 286px;
+
+        #first, #second, #third {
+            width: 100%;
+            height: auto;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+        }
+
+        #first {
+            @include category_img;
+
+            .text-wrapper {
+                position: relative;
+                width: 100%;
+                margin-top: -60%;
+            }
+        }
+
+        #second {
+            @include category_img;
+
+            .text-wrapper {
+                position: relative;
+                width: 100%;
+                margin-top: -60%;
+            }
+        }
+
+        #third {
+            @include category_img;
+
+            .text-wrapper {
+                position: relative;
+                width: 100%;
+                margin-top: -60%;
+            }
+        }
+    }
+}
