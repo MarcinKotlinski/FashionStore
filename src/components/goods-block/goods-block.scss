@@ -5,8 +5,38 @@
 
     .section-header{
         float: left;
+        border-bottom: none;
+
+        ul{
+            display: table;
+            li{
+                float: left;
+                margin-right: 20px;
+                color: $goods-header;
+                border-bottom: 1px solid $goods-header;
+                padding-right: 122px;
+                padding-bottom: 10px;
+            }
+            li:hover{
+                color: #444;
+                border-bottom: 1px solid #6b6b6b;
+            }
+        }
     }
 
+    .arrows{
+        float: right;
+
+        ul{
+            display: table;
+            float: right;
+            li{
+                float: right;
+                margin: 10px;
+            }
+        }
+    }
+    
     .men-row {
         content: "";
         display: table;
