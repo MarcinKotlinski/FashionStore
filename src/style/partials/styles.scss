@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 /* main styles */
 body,
@@ -36,4 +37,9 @@ a {
   margin: 0 auto;
   position: relative;
   text-align: center;
+}
+
+.section-header{
+  @include header;
+  margin-left: 18px;
 }

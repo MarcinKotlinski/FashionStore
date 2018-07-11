@@ -1,0 +1,96 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
+.for-women {
+
+    .section-header{
+        float: left;
+    }
+
+    .arrows{
+        float: right;
+
+        ul{
+            display: table;
+            float: right;
+            li{
+                float: right;
+                margin: 10px;
+            }
+        }
+    }
+
+    .men-row {
+        content: "";
+        display: table;
+        clear: both;
+        width: 100%;
+        margin-bottom: 50px;
+
+        .col {
+            float: left;
+            width: 50%;
+        }
+
+        .left {
+            @include category_img;
+
+            h2 {
+                font-size: 40px;
+            }
+
+            h3 {
+                margin-bottom: 183px;
+                left: 40%;
+            }
+        }
+
+        .right {
+            img {
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                text-align: left;
+            }
+
+            .head {
+                margin: 0 8px;
+                padding-bottom: 8px;
+                border-bottom: 1px solid $border;
+            }
+
+            .body {
+                margin: 8px 8px;
+
+                h3 {
+                    font-size: 20px;
+                    text-align: left;
+                    margin-bottom: 8px;
+                }
+
+                ul{
+                    display: table;
+                    float: left;
+                    margin-top: 8px;
+
+                    li{
+                        float: left;
+                    }
+                }
+
+                h4{
+                    float: right;
+                    padding: 8px;
+                    background: $red;
+                    color: #fff;
+                    font-weight: lighter;
+                }
+
+                h4:hover{
+                    background: red;
+                }
+            }
+        }
+    }
+}

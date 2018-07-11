@@ -22,13 +22,23 @@
     h2 {
         font-size: 28px;
         text-transform: uppercase;
+        position: relative;
+        margin-top: -51%;
+        margin-bottom: 30px;
     }
 
     h3 {
         font-size: 15px;
-        background: $red;
-        padding: 14px;
+        background: #db3838;
+        padding: 12px 36px;
         font-weight: lighter;
+        position: relative;
+        width: fit-content;
+        left: 31%;
+    }
+
+    h3:hover{
+        background: red;
     }
 }
 
