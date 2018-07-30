@@ -1,0 +1,53 @@
+.fade-gallery {
+    position: relative;
+    background: url("../../images/banner top.png") no-repeat;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 35px;
+
+    .content {
+        top: 50%;
+
+        h4 {
+            @include gotham_medium;
+
+            font-size: 25px;
+            margin-top: 146px;
+        }
+
+        h3 {
+            @include gotham_medium;
+
+            font-size: 85px;
+        }
+
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 34px;
+            font-style: italic;
+        }
+
+        p {
+            @include gotham_medium;
+
+            font-weight: bold;
+            font-size: 42px;
+            margin-bottom: 259px;
+        }
+    }
+}
+
+.arrow-right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow-left {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
