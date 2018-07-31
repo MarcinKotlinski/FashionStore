@@ -39,6 +39,25 @@ a {
   text-align: center;
 }
 
+.arrow-left,
+.arrow-right {
+  z-index: 9;
+}
+
+.arrow-left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-right {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .section-header{
   @include header;
   margin-left: 18px;

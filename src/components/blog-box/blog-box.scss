@@ -26,6 +26,14 @@
             font-size: 15px;
             text-transform: uppercase;
             padding: 30px 10px 0 10px;
+            color: $darker-words;
+        }
+
+        h2:hover{
+            color:red;
+            p{
+                color: red;
+            }
         }
 
         p{
@@ -33,6 +41,14 @@
             padding: 30px 10px 0 10px;
             font-size: 15px;
             font-weight: lighter;
+            color: $darker-words;
+        }
+
+        p:hover{
+            color:red;
+            h2{
+                color: red;
+            }
         }
 
     }

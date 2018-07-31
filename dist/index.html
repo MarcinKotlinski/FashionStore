@@ -59,22 +59,7 @@
             <button class="tablinks last" onclick="openCity(event, 'Tokyo')">Shopping Cart (0)</button>
         </div>
     </div>
-
-    <div id="London" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-    </div>
-
-    <div id="Paris" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-    </div>
-
-    <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
-    </div>
-
+    
     <script>
         function openCity(evt, cityName) {
             var i, tabcontent, tablinks;
@@ -91,20 +76,124 @@
         }
     </script>
 </div>
-        <div class="fade-gallery">
-    <a class="arrow-right" href="#">
-        <img src="../../images/arrow_right.png">
-    </a>
-    <a class="arrow-left" href="#">
-        <img src="../../images/arrow_left.png">
-    </a>
-    <div class="content">
-        <h4>new!</h4>
-        <h3>Collection 2016</h3>
-        <h2>for</h2>
-        <p>men & women</p>
+        <div class="top-gallery">
+    <div class="slider">
+        <a class="arrow-left" href="#">
+            <img src="../../images/arrow_left.png">
+        </a>
+        <div class="mask">
+            <ul>
+                <li>
+                    <div class="content">
+                        <h4>new!</h4>
+                        <h3>Collection 2016</h3>
+                        <h2>for</h2>
+                        <p>men & women</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content">
+                        <h4>new!</h4>
+                        <h3>Collection 2016</h3>
+                        <h2>for</h2>
+                        <p>men & women</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="content">
+                        <h4>new!</h4>
+                        <h3>Collection 2016</h3>
+                        <h2>for</h2>
+                        <p>men & women</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a class="arrow-right" href="#">
+            <img src="../../images/arrow_right.png">
+        </a>
     </div>
+
 </div>
+
+<script>
+    function slideGallery() {
+        var slideGallery = document.querySelector('.slider'); // slider div container
+        var slidesList = slideGallery.querySelector('ul'); // slides ul list
+        var slideItems = slideGallery.querySelectorAll('ul li'); // slides li elements
+        var slidesNumber = slideItems.length;
+        var slidesWidth = slideItems[0].offsetWidth; // getting width by first element
+        var currentSlide = 0; // active slide indicator
+
+        // lets set our slides ul width by slides number;
+        var slidesListWidth = slidesWidth * slidesNumber;
+        slidesList.style.width = slidesListWidth + "px";
+
+        // default state, slide[0] active;
+        setPosition();
+        autoSlide();
+        // delay();
+
+        // slide to next
+        function slideLeft() {
+            if (currentSlide < slidesNumber - 1) { // -1 cause our first element has index [0]
+                currentSlide++;
+            }
+            else {
+                currentSlide = 0;
+            }
+            setPosition();
+        }
+
+        // slide to prev
+        function slideRight() {
+            if (currentSlide != 0) {
+                currentSlide--;
+            }
+            else {
+                currentSlide = slidesNumber - 1; // -1 cause our first element has index [0]
+            }
+            setPosition();
+        }
+
+        // set slides list position
+        function setPosition() {
+            var offset = currentSlide * slidesWidth * -1 + 'px';
+            slidesList.style.marginLeft = offset;
+            setActiveClass();
+        }
+
+        // set active class for slide element
+        function setActiveClass() {
+            // reset all active classes
+            for (item of slideItems) {
+                item.classList.remove('active');
+            }
+
+            // set active class
+            slideItems[currentSlide].classList.add('active');
+        }
+
+        // adding buttons event handlers
+        slideGallery.querySelector('.arrow-right').addEventListener("click", function (event) {
+            event.preventDefault();
+            slideLeft();
+        });
+        slideGallery.querySelector('.arrow-left').addEventListener("click", function (event) {
+            event.preventDefault();
+            slideRight();
+        });
+    }
+
+
+    window.onload = function () {
+
+        // slide gallery
+        slideGallery();
+
+    };
+
+</script>
 </header>
     <main id="main">
     <div class="top-block">
@@ -115,31 +204,31 @@
                     <a>Go quickly to</a>
                 </li>
                 <li>
-                    <a>Women</a>
+                    <a href="#">Women</a>
                 </li>
                 <li>
-                    <a>Men</a>
+                    <a href="#">Men</a>
                 </li>
                 <li>
-                    <a>Accessories</a>
+                    <a href="#">Accessories</a>
                 </li>
                 <li>
-                    <a>Fashion</a>
+                    <a href="#">Fashion</a>
                 </li>
                 <li>
-                    <a>Features</a>
+                    <a href="#">Features</a>
                 </li>
                 <li>
-                    <a>Clothing</a>
+                    <a href="#">Clothing</a>
                 </li>
                 <li>
-                    <a>Bags and Wallets</a>
+                    <a href="#">Bags and Wallets</a>
                 </li>
                 <li>
-                    <a>Fragrances</a>
+                    <a href="#">Fragrances</a>
                 </li>
                 <li>
-                    <a>Caps & Hats</a>
+                    <a href="#">Caps & Hats</a>
                 </li>
             </ul>
         </div>
@@ -147,17 +236,17 @@
             <div id="first">
                 <img src="../../images/category_banner_1.png">
                 <h2>clothes</h2>
-                <h3>Click here</h3>
+                <a href="#"><h3>Click here</h3></a>
             </div>
             <div id="second">
                 <img src="../../images/category_banner_2.png">
                 <h2>footwear</h2>
-                <h3>Click here</h3>
+                <a href="#"><h3>Click here</h3></a>
             </div>
             <div id="third">
                 <img src="../../images/category_banner_3.png">
                 <h2>hand bags</h2>
-                <h3>Click here</h3>
+                <a href="#"><h3>Click here</h3></a>
             </div>
         </div>
     </div>
@@ -169,25 +258,29 @@
         </div>
         <div class="arrows">
             <ul>
-                <li><img src="../../images/arrow_right_smaller.png" alt=""></li>
-                <li><img src="../../images/arrow left_smaller.png" alt=""></li>
+                <li>
+                    <a href="#"><img src="../../images/arrow_right_smaller.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../../images/arrow left_smaller.png" alt=""></a>
+                </li>
             </ul>
         </div>
         <div class="men-row">
             <div class="col left">
                 <img src="../../images/banner-men.png">
                 <h2>for men</h2>
-                <h3>more</h3>
+                <a href="#"><h3>more</h3></a>
             </div>
             <div class="col right">
                 <div class="col">
-                    <img src="../../images/product_men_1.png">
+                    <a href="#"><img src="../../images/product_men_1.png"></a>
                     <div class="head">
-                        <h2>Printed Chiffon Dress</h2>
+                        <a href="#"><h2>Printed Chiffon Dress</h2></a>
                     </div>
                     <div class="body">
                         <h3>£ 61.19</h3>
-                        <h4>Add to cart</h4>
+                        <a href="#"><h4>Add to cart</h4></a>
                         <ul>
                             <li>
                                 <img src="../../images/gwiazda_pelna.png">
@@ -208,13 +301,13 @@
                     </div>
                 </div>
                 <div class="col">
-                    <img src="../../images/product_men_2.png">
+                    <a href="#"><img src="../../images/product_men_2.png"></a>
                     <div class="head">
                         <h2>Printed Chiffon Dress</h2>
                     </div>
                     <div class="body">
                         <h3>£ 61.19</h3>
-                        <h4>Add to cart</h4>
+                        <a href="#"><h4>Add to cart</h4></a>
                         <ul>
                             <li>
                                 <img src="../../images/gwiazda_pelna.png">
@@ -246,65 +339,65 @@
         <div class="arrows">
             <ul>
                 <li>
-                    <img src="../../images/arrow_right_smaller.png" alt="">
+                    <a href="#"><img src="../../images/arrow_right_smaller.png" alt=""></a>
                 </li>
                 <li>
-                    <img src="../../images/arrow left_smaller.png" alt="">
+                    <a href="#"><img src="../../images/arrow left_smaller.png" alt=""></a>
                 </li>
             </ul>
         </div>
         <div class="men-row">
             <div class="col right">
                 <div class="col">
-                    <img src="../../images/product_women_1.png">
+                    <a href="#"><img src="../../images/product_women_1.png"></a>
                     <div class="head">
-                        <h2>Printed Chiffon Dress</h2>
+                        <a href="#"><h2>Printed Chiffon Dress</h2></a>
                     </div>
                     <div class="body">
                         <h3>£ 61.19</h3>
-                        <h4>Add to cart</h4>
+                        <a href="#"><h4>Add to cart</h4></a>
                         <ul>
                             <li>
-                                <img src="../../images/gwiazda_pelna.png">
+                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <img src="../../images/gwiazda_pelna.png">
+                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <img src="../../images/gwiazda_pelna.png">
+                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <img src="../../images/gwiazda_pelna.png">
+                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <img src="../../images/gwiazda_pusta.png">
+                                <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="../../images/product_women_2.png">
+                    <a href="#"><img src="../../images/product_women_2.png"></a>
                     <div class="head">
-                        <h2>Printed Chiffon Dress</h2>
+                        <a href="#"><h2>Printed Chiffon Dress</h2></a>
                     </div>
                     <div class="body">
                         <h3>£ 61.19</h3>
-                        <h4>Add to cart</h4>
+                        <a href="#"><h4>Add to cart</h4></a>
                         <ul>
                             <li>
-                                <img src="../../images/gwiazda_pelna.png">
+                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <img src="../../images/gwiazda_pelna.png">
+                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <img src="../../images/gwiazda_pelna.png">
+                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <img src="../../images/gwiazda_pelna.png">
+                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <img src="../../images/gwiazda_pusta.png">
+                                <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
                             </li>
                         </ul>
                     </div>
@@ -313,7 +406,7 @@
             <div class="col left">
                 <img src="../../images/banner_women.png">
                 <h2>for women</h2>
-                <h3>Click here</h3>
+                <a href="#"><h3>Click here</h3></a>
             </div>
         </div>
     </div>
@@ -322,127 +415,127 @@
     <div class="holder">
         <div class="section-header">
             <ul>
-                <li><h2>new arrivals</h2></li>
-                <li><h2>best sellers</h2></li>
-                <li><h2>pupular</h2></li>
+                <li><a href="#"><h2>new arrivals</h2></a></li>
+                <li><a href="#"><h2>best sellers</h2></a></li>
+                <li><a href="#"><h2>pupular</h2></a></li>
             </ul>
         </div>
         <div class="arrows">
             <ul>
                 <li>
-                    <img src="../../images/arrow_right_smaller.png" alt="">
+                    <a href="#"><img src="../../images/arrow_right_smaller.png" alt=""></a>
                 </li>
                 <li>
-                    <img src="../../images/arrow left_smaller.png" alt="">
+                    <a href="#"><img src="../../images/arrow left_smaller.png" alt=""></a>
                 </li>
             </ul>
         </div>
         <div class="men-row">
 
             <div class="col">
-                <img src="../../images/arrival_1.png">
+                <a href="#"><img src="../../images/arrival_1.png"></a>
                 <div class="head">
-                    <h2>Printed Chiffon Dress</h2>
+                    <a href="#"><h2>Printed Chiffon Dress</h2></a>
                 </div>
                 <div class="body">
                     <h3>£ 61.19</h3>
-                    <h4>Add to cart</h4>
+                    <a href="#"><h4>Add to cart</h4></a>
                     <ul>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pusta.png">
+                            <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col">
-                <img src="../../images/arrival_2.png">
+                <a href="#"><img src="../../images/arrival_2.png"></a>
                 <div class="head">
-                    <h2>Printed Chiffon Dress</h2>
+                    <a href="#"><h2>Printed Chiffon Dress</h2></a>
                 </div>
                 <div class="body">
                     <h3>£ 61.19</h3>
-                    <h4>Add to cart</h4>
+                    <a href="#"><h4>Add to cart</h4></a>
                     <ul>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pusta.png">
+                            <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col">
-                <img src="../../images/arrival_3.png">
+                <a href="#"><img src="../../images/arrival_3.png"></a>
                 <div class="head">
-                    <h2>Printed Chiffon Dress</h2>
+                    <a href="#"><h2>Printed Chiffon Dress</h2></a>
                 </div>
                 <div class="body">
                     <h3>£ 61.19</h3>
-                    <h4>Add to cart</h4>
+                    <a href="#"><h4>Add to cart</h4></a>
                     <ul>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pusta.png">
+                            <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col">
-                <img src="../../images/arrival_4.png">
+                <a href="#"><img src="../../images/arrival_4.png"></a>
                 <div class="head">
-                    <h2>Printed Chiffon Dress</h2>
+                    <a href="#"><h2>Printed Chiffon Dress</h2></a>
                 </div>
                 <div class="body">
                     <h3>£ 61.19</h3>
-                    <h4>Add to cart</h4>
+                    <a href="#"><h4>Add to cart</h4></a>
                     <ul>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pelna.png">
+                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
                         </li>
                         <li>
-                            <img src="../../images/gwiazda_pusta.png">
+                            <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
                         </li>
                     </ul>
                 </div>
@@ -459,22 +552,22 @@
             </div>
             <div class="blog-gallery">
                 <div class="col">
-                    <img src="../../images/blog_1.png">
-                    <h2>Curabitur ligulasapien</h2>
-                    <p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
-                        eu lacus. Curabitur malesuada erat </p>
+                    <a href><img src="../../images/blog_1.png"></a>
+                    <a href="#"><h2>Curabitur ligulasapien</h2></a>
+                    <a href="#"><p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
+                        eu lacus. Curabitur malesuada erat </p></a>
                 </div>
                 <div class="col">
-                    <img src="../../images/blog_2.png">
-                    <h2>Curabitur ligulasapien</h2>
-                    <p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
-                        eu lacus. Curabitur malesuada erat </p>
+                    <a href="#"><img src="../../images/blog_2.png"></a>
+                    <a href="#"><h2>Curabitur ligulasapien</h2></a>
+                    <a href="#"><p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
+                        eu lacus. Curabitur malesuada erat </p></a>
                 </div>
                 <div class="col">
-                    <img src="../../images/blog_3.png">
-                    <h2>Curabitur ligulasapien</h2>
-                    <p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
-                        eu lacus. Curabitur malesuada erat </p>
+                    <a href="#"><img src="../../images/blog_3.png"></a>
+                    <a href="#"><h2>Curabitur ligulasapien</h2></a>
+                    <a href="#"><p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
+                        eu lacus. Curabitur malesuada erat </p></a>
                 </div>
             </div>
         </div>
@@ -498,10 +591,17 @@
                 </div>
                 <div class="column_footer right">
                     <div class="sign_bar">
+
                         <div class="col_left">
                             <a>Sign up for our newsletter</a>
                         </div>
-                        <div class="col_right">
+
+                        <form action="/action_page.php">
+                            <input name="firstname" type="text" placeholder="hello@psdfreebies.com">
+                            <input type="submit" placeholder="Submit">
+                        </form>
+
+                        <!-- <div class="col_right"> 
                             <ul>
                                 <li>
                                     <a>hello@psdfreebies.com</a>
@@ -510,25 +610,41 @@
                                     <a>Submit</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="row_footer">
                         <div class="column_inside">
                             <h2>information</h2>
                             <ul>
-                                <li>Careers</li>
-                                <li>Investor Relations</li>
-                                <li>Press Releases</li>
-                                <li>Shop with Points</li>
+                                <li>
+                                    <a href="#">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="#">Investor Relations</a>
+                                </li>
+                                <li>
+                                    <a href="#">Press Releases</a>
+                                </li>
+                                <li>
+                                    <a href="#">Shop with Points</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="column_inside">
                             <h2>Customer care</h2>
                             <ul>
-                                <li>Returns</li>
-                                <li>Shipping info</li>
-                                <li>Gift Cards</li>
-                                <li>Size Guide</li>
+                                <li>
+                                    <a href="#">Returns</a>
+                                </li>
+                                <li>
+                                    <a href="#">Shipping info</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gift Cards</a>
+                                </li>
+                                <li>
+                                    <a href="#">Size Guide</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="column_inside">

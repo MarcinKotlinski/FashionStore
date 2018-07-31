@@ -1,10 +1,10 @@
-.fade-gallery {
+.top-gallery {
     position: relative;
     background: url("../../images/banner top.png") no-repeat;
     color: #fff;
     padding: 10px;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 56px;
 
     .content {
         top: 50%;
@@ -36,18 +36,4 @@
             margin-bottom: 259px;
         }
     }
-}
-
-.arrow-right {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.arrow-left {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
 }

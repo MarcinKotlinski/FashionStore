@@ -10,6 +10,12 @@
         ul {
             li {
                 display: inline;
+                a{
+                    color: $topColumn;
+                }
+                a:hover{
+                    color: red;
+                }
             }
 
             li:after {
@@ -25,6 +31,12 @@
             li:first-child:after {
                 content: url("../../images/next.png");
             }
+
+            li:first-child:hover{
+                a{
+                color: $topColumn;
+                }
+            }
         }
     }
 
@@ -38,6 +50,10 @@
             height: auto;
             margin: 10px;
             text-align: center;
+
+            a{
+                color: #fff;
+            }
         }
 
         #first {

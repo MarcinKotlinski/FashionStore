@@ -3,17 +3,18 @@
 
 .for-women {
 
-    .section-header{
+    .section-header {
         float: left;
     }
 
-    .arrows{
+    .arrows {
         float: right;
 
-        ul{
+        ul {
             display: table;
             float: right;
-            li{
+
+            li {
                 float: right;
                 margin: 10px;
             }
@@ -42,6 +43,7 @@
             h3 {
                 margin-bottom: 183px;
                 left: 40%;
+                color: #fff;
             }
         }
 
@@ -52,6 +54,12 @@
 
             h2 {
                 text-align: left;
+                color: $topColumn;
+            }
+
+            h2:hover {
+                color: red;
+                font-size: 16px;
             }
 
             .head {
@@ -69,17 +77,25 @@
                     margin-bottom: 8px;
                 }
 
-                ul{
+                ul {
                     display: table;
                     float: left;
                     margin-top: 8px;
 
-                    li{
+                    li {
                         float: left;
+                    }
+
+                    li:hover {
+                        content: url("../../images/gwiazda_pusta.png");
+                    }
+
+                    li:last-child:hover {
+                        content: url("../../images/gwiazda_pelna.png");
                     }
                 }
 
-                h4{
+                h4 {
                     float: right;
                     padding: 8px;
                     background: $red;
@@ -87,7 +103,7 @@
                     font-weight: lighter;
                 }
 
-                h4:hover{
+                h4:hover {
                     background: red;
                 }
             }

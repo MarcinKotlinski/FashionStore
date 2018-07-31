@@ -2,9 +2,10 @@
 @import "../../style/partials/variables";
 
 .footer-box {
-    .holder{
+    .holder {
         width: 1100px !important;
     }
+
     .main-footer {
         height: auto;
         color: $darker-words;
@@ -51,6 +52,14 @@
             clear: both;
             width: 100%;
             padding-top: 30px;
+
+            a {
+                color: $topColumn;
+            }
+
+            a:hover {
+                color: red;
+            }
         }
 
         .sign_bar {
@@ -70,52 +79,70 @@
                     float: left;
                     margin-right: 15px;
                 }
-            }
 
-            .col_right {
-                width: 60%;
-                float: left;
-                background: $border;
-
-                ul {
-                    li {
-                        display: inline;
-
-                        a {
-                            font-size: 15px;
-                            text-transform: none;
-                            font-weight: lighter;
-                        }
-                    }
-
-                    li:first-child {
-                        float: left;
-                        padding: 14px 15px;
-                    }
-
-                    li:nth-child(2) {
-                        padding: 14px 15px;
-                        background: $red;
-                        color: #fff;
-                        float: right;
-
-                        a:hover {
-                            color: #fff;
-                        }
-                    }
-
-                    li:nth-child(2):hover {
-                        background: red;
-                    }
+                a:hover {
+                    color: $topColumn;
                 }
             }
-        }
-    }
 
-    h2 {
-        text-align: center;
-        font-size: 13px;
-        font-weight: lighter;
-        margin-bottom: 26px;
+            input[type=text], select {
+                font-size: 15px;
+                padding: 13px 28px;
+                background: $border;
+            }
+
+            input[type=submit], select {
+                font-size: 15px;
+                padding: 13px 14px;
+                background: $red;
+                color: #fff;
+            }
+
+            // .col_right {
+            //     width: 60%;
+            //     float: left;
+            //     background: $border;
+
+            //     ul {
+            //         li {
+            //             display: inline;
+
+            //             a {
+            //                 font-size: 15px;
+            //                 text-transform: none;
+            //                 font-weight: lighter;
+            //             }
+            //         }
+
+            //         li:first-child {
+            //             float: left;
+            //             padding: 14px 15px;
+            //         }
+
+            //         li:nth-child(2) {
+            //             padding: 14px 15px;
+            //             background: $red;
+            //             color: #fff;
+            //             float: right;
+
+            //             a:hover {
+            //                 color: #fff;
+            //             }
+            //         }
+
+            //         li:nth-child(2):hover {
+            //             background: red;
+            //         }
+            //     }
+            // }
+       
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 13px;
+            font-weight: lighter;
+            margin-bottom: 26px;
+        }
     }
 }
