@@ -20,7 +20,22 @@
                 </a>
             </div>
             <div class="search-engine">
-                <ul>
+
+                    <form action="/action_page.php">
+                        <input name="firstname" type="text">
+                        <input list="browsers" name="browser" placeholder="All categories">
+                        <datalist id="browsers">
+                          <option value="Men">
+                          <option value="Women">
+                          <option value="Blog">
+                          <option value="Clothes">
+                          <option value="Footwear">
+                          <option value="Bags">
+                        </datalist>
+                        <input type="submit">
+                      </form>
+
+                <!-- <ul>
                     <li>
                         <a>Search</a>
                     </li>
@@ -30,7 +45,7 @@
                     <li>
                         <i class="fas fa-search"></i>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
