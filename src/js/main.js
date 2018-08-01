@@ -2,7 +2,7 @@
 
 const init = () => {
 
-    let visualGallery = fadeGallery({
+    let topGallery = fadeGallery({
         galleryBlock: '#visual-box',              // gallery block
         items: '.fade-gallery__item',         // slides selector
         galleryImage: '.fade-gallery__image', // gallery image

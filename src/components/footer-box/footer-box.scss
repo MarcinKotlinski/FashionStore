@@ -97,52 +97,13 @@
                 background: $red;
                 color: #fff;
             }
-
-            // .col_right {
-            //     width: 60%;
-            //     float: left;
-            //     background: $border;
-
-            //     ul {
-            //         li {
-            //             display: inline;
-
-            //             a {
-            //                 font-size: 15px;
-            //                 text-transform: none;
-            //                 font-weight: lighter;
-            //             }
-            //         }
-
-            //         li:first-child {
-            //             float: left;
-            //             padding: 14px 15px;
-            //         }
-
-            //         li:nth-child(2) {
-            //             padding: 14px 15px;
-            //             background: $red;
-            //             color: #fff;
-            //             float: right;
-
-            //             a:hover {
-            //                 color: #fff;
-            //             }
-            //         }
-
-            //         li:nth-child(2):hover {
-            //             background: red;
-            //         }
-            //     }
-            // }
-       
         }
+    }
 
-        h2 {
-            text-align: center;
-            font-size: 13px;
-            font-weight: lighter;
-            margin-bottom: 26px;
-        }
+    h2 {
+        text-align: center;
+        font-size: 13px;
+        font-weight: lighter;
+        margin-bottom: 26px;
     }
 }
