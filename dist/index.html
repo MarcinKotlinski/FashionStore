@@ -28,7 +28,7 @@
     <div class="holder">
         <div id="logo-line">
             <div class="logo">
-                <a href="#">
+                <a href="#a">
                     <img src="../../images/logo.png">
                 </a>
             </div>
@@ -87,49 +87,87 @@
             evt.currentTarget.className += " active";
         }
     </script>
-</div>
+</div> 
         <div class="topGallery">
-    <div class="slider">
-        <a class="arrow-left" href="#">
-            <img src="../../images/arrow_left.png">
-        </a>
-        <div class="mask">
-            <ul>
-                <li>
-                    <div class="content">
-                        <h4>new!</h4>
-                        <h3>Collection 2016</h3>
-                        <h2>for</h2>
-                        <p>men & women</p>
-                    </div>
-                </li>
-                <!-- <li>
-                    <div class="content">
-                        <h4>new!</h4>
-                        <h3>Collection 2016</h3>
-                        <h2>for</h2>
-                        <p>men & women</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="content">
-                        <h4>new!</h4>
-                        <h3>Collection 2016</h3>
-                        <h2>for</h2>
-                        <p>men & women</p>
-                    </div>
-                </li> -->
-            </ul>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="../../images/banner top.png" style="width:100%">
+            <div class="content">
+                <div class="local-holder">
+                    <h4>new!</h4>
+                    <h3>Collection 2016</h3>
+                    <h2>for</h2>
+                    <p>men & women</p>
+                </div>
+            </div>
         </div>
-        <a class="arrow-right" href="#">
-            <img src="../../images/arrow_right.png">
+
+        <div class="mySlides fade">
+            <img src="../../images/banner top.png" style="width:100%">
+            <div class="content">
+                <div class="local-holder">
+                    <h4>new!</h4>
+                    <h3>Hand Bags 2017</h3>
+                    <h2>for</h2>
+                    <p>men & women</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="../../images/banner top.png" style="width:100%">
+            <div class="content">
+                <div class="local-holder">
+                    <h4>new!</h4>
+                    <h3>Footwear 2015</h3>
+                    <h2>for</h2>
+                    <p>men & women</p>
+                </div>
+            </div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)" href="#a">
+            <img src="../../images/arrow_left.png" alt="arrow_left">
         </a>
+        <a class="next" onclick="plusSlides(1)" href="#a">
+            <img src="../../images/arrow_right.png" alt="arrow_right">
+        </a>
+
     </div>
+
 
 </div>
 
 <script>
-   
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
 
 </script>
 </header>
@@ -142,31 +180,31 @@
                     <a>Go quickly to</a>
                 </li>
                 <li>
-                    <a href="#">Women</a>
+                    <a href="#a">Women</a>
                 </li>
                 <li>
-                    <a href="#">Men</a>
+                    <a href="#a">Men</a>
                 </li>
                 <li>
-                    <a href="#">Accessories</a>
+                    <a href="#a">Accessories</a>
                 </li>
                 <li>
-                    <a href="#">Fashion</a>
+                    <a href="#a">Fashion</a>
                 </li>
                 <li>
-                    <a href="#">Features</a>
+                    <a href="#a">Features</a>
                 </li>
                 <li>
-                    <a href="#">Clothing</a>
+                    <a href="#a">Clothing</a>
                 </li>
                 <li>
-                    <a href="#">Bags and Wallets</a>
+                    <a href="#a">Bags and Wallets</a>
                 </li>
                 <li>
-                    <a href="#">Fragrances</a>
+                    <a href="#a">Fragrances</a>
                 </li>
                 <li>
-                    <a href="#">Caps & Hats</a>
+                    <a href="#a">Caps & Hats</a>
                 </li>
             </ul>
         </div>
@@ -174,17 +212,17 @@
             <div id="first">
                 <img src="../../images/category_banner_1.png">
                 <h2>clothes</h2>
-                <a href="#"><h3>Click here</h3></a>
+                <a href="#a"><h3>Click here</h3></a>
             </div>
             <div id="second">
                 <img src="../../images/category_banner_2.png">
                 <h2>footwear</h2>
-                <a href="#"><h3>Click here</h3></a>
+                <a href="#a"><h3>Click here</h3></a>
             </div>
             <div id="third">
                 <img src="../../images/category_banner_3.png">
                 <h2>hand bags</h2>
-                <a href="#"><h3>Click here</h3></a>
+                <a href="#a"><h3>Click here</h3></a>
             </div>
         </div>
     </div>
@@ -197,10 +235,10 @@
         <div class="arrows">
             <ul>
                 <li>
-                    <a href="#"><img src="../../images/arrow_right_smaller.png" alt=""></a>
+                    <a href="#a"><img src="../../images/arrow_right_smaller.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="#"><img src="../../images/arrow left_smaller.png" alt=""></a>
+                    <a href="#a"><img src="../../images/arrow left_smaller.png" alt=""></a>
                 </li>
             </ul>
         </div>
@@ -208,17 +246,17 @@
             <div class="col left">
                 <img src="../../images/banner-men.png">
                 <h2>for men</h2>
-                <a href="#"><h3>more</h3></a>
+                <a href="#a"><h3>more</h3></a>
             </div>
             <div class="col right">
                 <div class="col">
-                    <a href="#"><img src="../../images/product_men_1.png"></a>
+                    <a href="#a"><img src="../../images/product_men_1.png"></a>
                     <div class="head">
-                        <a href="#"><h2>Printed Chiffon Dress</h2></a>
+                        <a href="#a"><h2>Printed Chiffon Dress</h2></a>
                     </div>
                     <div class="body">
                         <h3>£ 61.19</h3>
-                        <a href="#"><h4>Add to cart</h4></a>
+                        <a href="#a"><h4>Add to cart</h4></a>
                         <ul>
                             <li>
                                 <img src="../../images/gwiazda_pelna.png">
@@ -239,13 +277,13 @@
                     </div>
                 </div>
                 <div class="col">
-                    <a href="#"><img src="../../images/product_men_2.png"></a>
+                    <a href="#a"><img src="../../images/product_men_2.png"></a>
                     <div class="head">
                         <h2>Printed Chiffon Dress</h2>
                     </div>
                     <div class="body">
                         <h3>£ 61.19</h3>
-                        <a href="#"><h4>Add to cart</h4></a>
+                        <a href="#a"><h4>Add to cart</h4></a>
                         <ul>
                             <li>
                                 <img src="../../images/gwiazda_pelna.png">
@@ -277,65 +315,65 @@
         <div class="arrows">
             <ul>
                 <li>
-                    <a href="#"><img src="../../images/arrow_right_smaller.png" alt=""></a>
+                    <a href="#a"><img src="../../images/arrow_right_smaller.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="#"><img src="../../images/arrow left_smaller.png" alt=""></a>
+                    <a href="#a"><img src="../../images/arrow left_smaller.png" alt=""></a>
                 </li>
             </ul>
         </div>
         <div class="men-row">
             <div class="col right">
                 <div class="col">
-                    <a href="#"><img src="../../images/product_women_1.png"></a>
+                    <a href="#a"><img src="../../images/product_women_1.png"></a>
                     <div class="head">
-                        <a href="#"><h2>Printed Chiffon Dress</h2></a>
+                        <a href="#a"><h2>Printed Chiffon Dress</h2></a>
                     </div>
                     <div class="body">
                         <h3>£ 61.19</h3>
-                        <a href="#"><h4>Add to cart</h4></a>
+                        <a href="#a"><h4>Add to cart</h4></a>
                         <ul>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pusta.png"></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col">
-                    <a href="#"><img src="../../images/product_women_2.png"></a>
+                    <a href="#a"><img src="../../images/product_women_2.png"></a>
                     <div class="head">
-                        <a href="#"><h2>Printed Chiffon Dress</h2></a>
+                        <a href="#a"><h2>Printed Chiffon Dress</h2></a>
                     </div>
                     <div class="body">
                         <h3>£ 61.19</h3>
-                        <a href="#"><h4>Add to cart</h4></a>
+                        <a href="#a"><h4>Add to cart</h4></a>
                         <ul>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pelna.png"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
+                                <a href="#a"><img src="../../images/gwiazda_pusta.png"></a>
                             </li>
                         </ul>
                     </div>
@@ -344,7 +382,7 @@
             <div class="col left">
                 <img src="../../images/banner_women.png">
                 <h2>for women</h2>
-                <a href="#"><h3>Click here</h3></a>
+                <a href="#a"><h3>Click here</h3></a>
             </div>
         </div>
     </div>
@@ -353,132 +391,211 @@
     <div class="holder">
         <div class="section-header">
             <ul>
-                <li><a href="#"><h2>new arrivals</h2></a></li>
-                <li><a href="#"><h2>best sellers</h2></a></li>
-                <li><a href="#"><h2>pupular</h2></a></li>
+                <li>
+                    <a href="#a">
+                        <h2>new arrivals</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <h2>best sellers</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <h2>pupular</h2>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="arrows">
             <ul>
                 <li>
-                    <a href="#"><img src="../../images/arrow_right_smaller.png" alt=""></a>
+                    <a href="#a">
+                        <img src="../../images/arrow_right_smaller.png" alt="">
+                    </a>
                 </li>
                 <li>
-                    <a href="#"><img src="../../images/arrow left_smaller.png" alt=""></a>
+                    <a href="#a">
+                        <img src="../../images/arrow left_smaller.png" alt="">
+                    </a>
                 </li>
             </ul>
         </div>
         <div class="men-row">
 
             <div class="col">
-                <a href="#"><img src="../../images/arrival_1.png"></a>
+                <a href="#a">
+                    <img src="../../images/arrival_1.png">
+                </a>
                 <div class="head">
-                    <a href="#"><h2>Printed Chiffon Dress</h2></a>
+                    <a href="#a">
+                        <h2>Printed Chiffon Dress</h2>
+                    </a>
                 </div>
                 <div class="body">
                     <h3>£ 61.19</h3>
-                    <a href="#"><h4>Add to cart</h4></a>
+                    <a href="#a">
+                        <h4>Add to cart</h4>
+                    </a>
                     <ul>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pusta.png">
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col">
-                <a href="#"><img src="../../images/arrival_2.png"></a>
+                <a href="#a">
+                    <img src="../../images/arrival_2.png">
+                </a>
                 <div class="head">
-                    <a href="#"><h2>Printed Chiffon Dress</h2></a>
+                    <a href="#">
+                        <h2>Printed Chiffon Dress</h2>
+                    </a>
                 </div>
                 <div class="body">
                     <h3>£ 61.19</h3>
-                    <a href="#"><h4>Add to cart</h4></a>
+                    <a href="#a">
+                        <h4>Add to cart</h4>
+                    </a>
                     <ul>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pusta.png">
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col">
-                <a href="#"><img src="../../images/arrival_3.png"></a>
+                <a href="#a">
+                    <img src="../../images/arrival_3.png">
+                </a>
                 <div class="head">
-                    <a href="#"><h2>Printed Chiffon Dress</h2></a>
+                    <a href="#">
+                        <h2>Printed Chiffon Dress</h2>
+                    </a>
                 </div>
                 <div class="body">
                     <h3>£ 61.19</h3>
-                    <a href="#"><h4>Add to cart</h4></a>
+                    <a href="#a">
+                        <h4>Add to cart</h4>
+                    </a>
                     <ul>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pusta.png">
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col">
-                <a href="#"><img src="../../images/arrival_4.png"></a>
+                <a href="#a">
+                    <img src="../../images/arrival_4.png">
+                </a>
                 <div class="head">
-                    <a href="#"><h2>Printed Chiffon Dress</h2></a>
+                    <a href="#a">
+                        <h2>Printed Chiffon Dress</h2>
+                    </a>
                 </div>
                 <div class="body">
                     <h3>£ 61.19</h3>
-                    <a href="#"><h4>Add to cart</h4></a>
+                    <a href="#a">
+                        <h4>Add to cart</h4>
+                    </a>
                     <ul>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pelna.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pelna.png">
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="../../images/gwiazda_pusta.png"></a>
+                            <a href="#a">
+                                <img src="../../images/gwiazda_pusta.png">
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -490,21 +607,21 @@
             </div>
             <div class="blog-gallery">
                 <div class="col">
-                    <a href><img src="../../images/blog_1.png"></a>
-                    <a href="#"><h2>Curabitur ligulasapien</h2></a>
-                    <a href="#"><p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
+                    <a href="#a"><img src="../../images/blog_1.png"></a>
+                    <a href="#a"><h2>Curabitur ligulasapien</h2></a>
+                    <a href="#a"><p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
                         eu lacus. Curabitur malesuada erat </p></a>
                 </div>
                 <div class="col">
-                    <a href="#"><img src="../../images/blog_2.png"></a>
-                    <a href="#"><h2>Curabitur ligulasapien</h2></a>
-                    <a href="#"><p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
+                    <a href="#a"><img src="../../images/blog_2.png"></a>
+                    <a href="#a"><h2>Curabitur ligulasapien</h2></a>
+                    <a href="#a"><p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
                         eu lacus. Curabitur malesuada erat </p></a>
                 </div>
                 <div class="col">
-                    <a href="#"><img src="../../images/blog_3.png"></a>
-                    <a href="#"><h2>Curabitur ligulasapien</h2></a>
-                    <a href="#"><p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
+                    <a href="#a"><img src="../../images/blog_3.png"></a>
+                    <a href="#a"><h2>Curabitur ligulasapien</h2></a>
+                    <a href="#a"><p>Vestibulum sagittis, nisl nec pellentesque suscipit, arcu nisi maximus neque, vitae finibus erat odio
                         eu lacus. Curabitur malesuada erat </p></a>
                 </div>
             </div>
@@ -545,16 +662,16 @@
                             <h2>information</h2>
                             <ul>
                                 <li>
-                                    <a href="#">Careers</a>
+                                    <a href="#a">Careers</a>
                                 </li>
                                 <li>
-                                    <a href="#">Investor Relations</a>
+                                    <a href="#a">Investor Relations</a>
                                 </li>
                                 <li>
-                                    <a href="#">Press Releases</a>
+                                    <a href="#a">Press Releases</a>
                                 </li>
                                 <li>
-                                    <a href="#">Shop with Points</a>
+                                    <a href="#a">Shop with Points</a>
                                 </li>
                             </ul>
                         </div>
@@ -562,16 +679,16 @@
                             <h2>Customer care</h2>
                             <ul>
                                 <li>
-                                    <a href="#">Returns</a>
+                                    <a href="#a">Returns</a>
                                 </li>
                                 <li>
-                                    <a href="#">Shipping info</a>
+                                    <a href="#a">Shipping info</a>
                                 </li>
                                 <li>
-                                    <a href="#">Gift Cards</a>
+                                    <a href="#a">Gift Cards</a>
                                 </li>
                                 <li>
-                                    <a href="#">Size Guide</a>
+                                    <a href="#a">Size Guide</a>
                                 </li>
                             </ul>
                         </div>

@@ -4,61 +4,63 @@
 /* main styles */
 body,
 html {
-  height: 100%;
-  margin: 0;
-  min-width: 1200px;
+    height: 100%;
+    margin: 0;
+    min-width: 1200px;
 }
 
 body {
-  background: $body-bg;
-  font: $font-body 'Gotham', Arial, Helvetica, sans-serif;
-  color: $topColumn;
+    background: $body-bg;
+    font: $font-body "Gotham", Arial, Helvetica, sans-serif;
+    color: $topColumn;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 
-  &:hover {
-    color: $red;
-  }
+    &:hover {
+        color: $red;
+    }
 }
 
 #wrapper {
-  width: 100%;
+    width: 100%;
 }
 
 .container {
-  width: 1150px;
-  margin: 0 auto;
-  position: relative;
+    width: 1150px;
+    margin: 0 auto;
+    position: relative;
 }
+
 .holder {
-  width: 1150px;
-  margin: 0 auto;
-  position: relative;
-  text-align: center;
+    width: 1150px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
 }
 
 .arrow-left,
 .arrow-right {
-  z-index: 9;
+    z-index: 9;
 }
 
 .arrow-left {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .arrow-right {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.section-header{
-  @include header;
-  margin-left: 18px;
+.section-header {
+    @include header;
+
+    margin-left: 18px;
 }
