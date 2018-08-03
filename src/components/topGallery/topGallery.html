@@ -6,10 +6,10 @@
             <img src="../../images/banner top.png" style="width:100%">
             <div class="content">
                 <div class="local-holder">
-                    <h4>new!</h4>
-                    <h3>Collection 2016</h3>
-                    <h2>for</h2>
-                    <p>men & women</p>
+                    <a href="#a"><h4>new!</h4></a>
+                    <a href="#a"><h3>Collection 2016</h3></a>
+                    <a href="#a"><h2>for</h2></a>
+                    <a href="#a"><p>men & women</p></a>
                 </div>
             </div>
         </div>
@@ -18,10 +18,10 @@
             <img src="../../images/banner top.png" style="width:100%">
             <div class="content">
                 <div class="local-holder">
-                    <h4>new!</h4>
-                    <h3>Hand Bags 2017</h3>
-                    <h2>for</h2>
-                    <p>men & women</p>
+                    <a href="#a"><h4>new!</h4></a>
+                    <a href="#a"><h3>Hand Bags 2017</h3></a>
+                    <a href="#a"><h2>for</h2></a>
+                    <a href="#a"><p>men & women</p></a>
                 </div>
             </div>
         </div>
@@ -30,14 +30,14 @@
             <img src="../../images/banner top.png" style="width:100%">
             <div class="content">
                 <div class="local-holder">
-                    <h4>new!</h4>
-                    <h3>Footwear 2015</h3>
-                    <h2>for</h2>
-                    <p>men & women</p>
+                    <a href="#a"><h4>new!</h4></a>
+                    <a href="#a"><h3>Footwear 2015</h3></a>
+                    <a href="#a"><h2>for</h2></a>
+                    <a href="#a"><p>men & women</p></a>
                 </div>
             </div>
         </div>
-        
+
         <a class="prev" onclick="plusSlides(-1)" href="#a">
             <img src="../../images/arrow_left.png" alt="arrow_left">
         </a>
@@ -67,8 +67,12 @@
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }

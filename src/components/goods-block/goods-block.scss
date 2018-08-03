@@ -2,124 +2,129 @@
 @import "../../style/partials/variables";
 
 .goods-block {
-    .section-header {
+  .section-header {
+    float: left;
+    border-bottom: none;
+
+    ul {
+      display: table;
+
+      li {
         float: left;
-        border-bottom: none;
+        margin-right: 20px;
+        color: $goods-header;
+        border-bottom: 1px solid $goods-header;
+        padding-right: 122px;
+        padding-bottom: 10px;
 
-        ul {
-            display: table;
-
-            li {
-                float: left;
-                margin-right: 20px;
-                color: $goods-header;
-                border-bottom: 1px solid $goods-header;
-                padding-right: 122px;
-                padding-bottom: 10px;
-
-                h2 {
-                    color: $topColumn;
-                }
-
-                h2:hover {
-                    color: #444;
-                }
-            }
-
-            li:hover {
-                color: #444;
-                border-bottom: 1px solid #6b6b6b;
-            }
+        h2 {
+          color: $topColumn;
         }
-    }
 
-    .arrows {
+        h2:hover {
+          color: #444;
+          font-size: larger;
+        }
+      }
+
+      li:hover {
+        color: #444;
+        border-bottom: 1px solid #6b6b6b;
+      }
+    }
+  }
+
+  .arrows {
+    float: right;
+
+    ul {
+      display: table;
+      float: right;
+
+      li {
         float: right;
+        margin: 10px;
+      }
+    }
+  }
+
+  .men-row {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+    margin-bottom: 50px;
+
+    #Paris, #Tokyo {
+      display: none;
+    }
+
+    .col {
+      float: left;
+      width: 25%;
+
+      img {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        text-align: left;
+      }
+
+      .head {
+        margin: 0 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $border;
+
+        h2 {
+          text-align: left;
+          color: $topColumn;
+        }
+
+        h2:hover {
+          color: red;
+          font-size: 16px;
+        }
+      }
+
+      .body {
+        margin: 8px 8px;
+
+        h3 {
+          font-size: 20px;
+          text-align: left;
+          margin-bottom: 8px;
+        }
 
         ul {
-            display: table;
-            float: right;
+          display: table;
+          float: left;
+          margin-top: 8px;
 
-            li {
-                float: right;
-                margin: 10px;
-            }
-        }
-    }
-
-    .men-row {
-        content: "";
-        display: table;
-        clear: both;
-        width: 100%;
-        margin-bottom: 50px;
-
-        .col {
+          li {
             float: left;
-            width: 25%;
+          }
+          li:hover {
+            content: url("../../images/gwiazda_pusta.png");
+          }
 
-            img {
-                margin-bottom: 20px;
-            }
-
-            h2 {
-                text-align: left;
-            }
-
-            .head {
-                margin: 0 8px;
-                padding-bottom: 8px;
-                border-bottom: 1px solid $border;
-
-                h2 {
-                    text-align: left;
-                    color: $topColumn;
-                }
-    
-                h2:hover {
-                    color: red;
-                    font-size: 16px;
-                }
-            }
-
-            .body {
-                margin: 8px 8px;
-
-                h3 {
-                    font-size: 20px;
-                    text-align: left;
-                    margin-bottom: 8px;
-                }
-
-                ul {
-                    display: table;
-                    float: left;
-                    margin-top: 8px;
-
-                    li {
-                        float: left;
-                    }
-                    li:hover {
-                        content: url("../../images/gwiazda_pusta.png");
-                    }
-
-                    li:last-child:hover {
-                        content: url("../../images/gwiazda_pelna.png");
-                    }
-                }
-
-                h4 {
-                    float: right;
-                    padding: 8px;
-                    background: $red;
-                    color: #fff;
-                    font-weight: lighter;
-                }
-
-                h4:hover {
-                    background: red;
-                }
-            }
+          li:last-child:hover {
+            content: url("../../images/gwiazda_pelna.png");
+          }
         }
+
+        h4 {
+          float: right;
+          padding: 8px;
+          background: $red;
+          color: #fff;
+          font-weight: lighter;
+        }
+
+        h4:hover {
+          background: red;
+        }
+      }
     }
+  }
 }

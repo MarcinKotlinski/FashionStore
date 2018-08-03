@@ -45,16 +45,16 @@
                                         <option value="Footwear">
                                             <option value="Bags">
                     </datalist>
-                    <input type="submit">
+                    <input type="submit" value="Search">
                 </form>
 
             </div>
             <div class="socials">
                 <ul>
-                    <li><a href="#"><img src="../../images/facebook.png" alt="facebook"></a></li>
-                    <li><a href="#"><img src="../../images/twitter.png" alt="twitter"></a></li>
-                    <li><a href="#"><img src="../../images/instagram.png" alt="instagram"></a></li>
-                    <li><a href="#"><img src="../../images/youtube.png" alt="youtube"></a></li>
+                    <li><a href="#a"><img src="../../images/facebook.png" alt="facebook"></a></li>
+                    <li><a href="#a"><img src="../../images/twitter.png" alt="twitter"></a></li>
+                    <li><a href="#a"><img src="../../images/instagram.png" alt="instagram"></a></li>
+                    <li><a href="#a"><img src="../../images/youtube.png" alt="youtube"></a></li>
                 </ul>
             </div>
         </div>
@@ -96,10 +96,10 @@
             <img src="../../images/banner top.png" style="width:100%">
             <div class="content">
                 <div class="local-holder">
-                    <h4>new!</h4>
-                    <h3>Collection 2016</h3>
-                    <h2>for</h2>
-                    <p>men & women</p>
+                    <a href="#a"><h4>new!</h4></a>
+                    <a href="#a"><h3>Collection 2016</h3></a>
+                    <a href="#a"><h2>for</h2></a>
+                    <a href="#a"><p>men & women</p></a>
                 </div>
             </div>
         </div>
@@ -108,10 +108,10 @@
             <img src="../../images/banner top.png" style="width:100%">
             <div class="content">
                 <div class="local-holder">
-                    <h4>new!</h4>
-                    <h3>Hand Bags 2017</h3>
-                    <h2>for</h2>
-                    <p>men & women</p>
+                    <a href="#a"><h4>new!</h4></a>
+                    <a href="#a"><h3>Hand Bags 2017</h3></a>
+                    <a href="#a"><h2>for</h2></a>
+                    <a href="#a"><p>men & women</p></a>
                 </div>
             </div>
         </div>
@@ -120,14 +120,14 @@
             <img src="../../images/banner top.png" style="width:100%">
             <div class="content">
                 <div class="local-holder">
-                    <h4>new!</h4>
-                    <h3>Footwear 2015</h3>
-                    <h2>for</h2>
-                    <p>men & women</p>
+                    <a href="#a"><h4>new!</h4></a>
+                    <a href="#a"><h3>Footwear 2015</h3></a>
+                    <a href="#a"><h2>for</h2></a>
+                    <a href="#a"><p>men & women</p></a>
                 </div>
             </div>
         </div>
-        
+
         <a class="prev" onclick="plusSlides(-1)" href="#a">
             <img src="../../images/arrow_left.png" alt="arrow_left">
         </a>
@@ -157,8 +157,12 @@
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
@@ -279,7 +283,7 @@
                 <div class="col">
                     <a href="#a"><img src="../../images/product_men_2.png"></a>
                     <div class="head">
-                        <h2>Printed Chiffon Dress</h2>
+                        <a href="#a"><h2>Printed Chiffon Dress</h2></a>
                     </div>
                     <div class="body">
                         <h3>£ 61.19</h3>
@@ -392,17 +396,17 @@
         <div class="section-header">
             <ul>
                 <li>
-                    <a href="#a">
+                    <a href="#a" class="tablinks" onclick="openCity(event, 'London')">
                         <h2>new arrivals</h2>
                     </a>
                 </li>
                 <li>
-                    <a href="#a">
+                    <a href="#a" class="tablinks" onclick="openCity(event, 'Paris')">
                         <h2>best sellers</h2>
                     </a>
                 </li>
                 <li>
-                    <a href="#a">
+                    <a href="#a" class="tablinks" onclick="openCity(event, 'Tokyo')">
                         <h2>pupular</h2>
                     </a>
                 </li>
@@ -423,182 +427,554 @@
             </ul>
         </div>
         <div class="men-row">
+            <div id="London" class="tabcontent">
+                <div class="col">
+                    <a href="#a">
+                        <img src="../../images/arrival_1.png">
+                    </a>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Printed Chiffon Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <a href="#a">
+                        <img src="../../images/arrival_2.png">
+                    </a>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Printed Chiffon Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <a href="#a">
+                        <img src="../../images/arrival_3.png">
+                    </a>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Printed Chiffon Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <a href="#a">
+                        <img src="../../images/arrival_4.png">
+                    </a>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Printed Chiffon Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-            <div class="col">
-                <a href="#a">
-                    <img src="../../images/arrival_1.png">
-                </a>
-                <div class="head">
+            <div id="Paris" class="tabcontent">
+                <div class="col">
                     <a href="#a">
-                        <h2>Printed Chiffon Dress</h2>
+                        <img src="../../images/arrival_4.png">
                     </a>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Chiffon Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="body">
-                    <h3>£ 61.19</h3>
+                <div class="col">
                     <a href="#a">
-                        <h4>Add to cart</h4>
+                        <img src="../../images/arrival_3.png">
                     </a>
-                    <ul>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pusta.png">
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Printed Chiffon </h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <a href="#a">
+                        <img src="../../images/arrival_2.png">
+                    </a>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Printed Chiffon Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <a href="#a">
+                        <img src="../../images/arrival_1.png">
+                    </a>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Printed Chiffon</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <a href="#a">
-                    <img src="../../images/arrival_2.png">
-                </a>
-                <div class="head">
-                    <a href="#">
-                        <h2>Printed Chiffon Dress</h2>
-                    </a>
-                </div>
-                <div class="body">
-                    <h3>£ 61.19</h3>
+
+            <div id="Tokyo" class="tabcontent">
+                <div class="col">
                     <a href="#a">
-                        <h4>Add to cart</h4>
+                        <img src="../../images/arrival_2.png">
                     </a>
-                    <ul>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pusta.png">
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Printed Localy Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <a href="#a">
-                    <img src="../../images/arrival_3.png">
-                </a>
-                <div class="head">
-                    <a href="#">
-                        <h2>Printed Chiffon Dress</h2>
-                    </a>
-                </div>
-                <div class="body">
-                    <h3>£ 61.19</h3>
+                <div class="col">
                     <a href="#a">
-                        <h4>Add to cart</h4>
+                        <img src="../../images/arrival_4.png">
                     </a>
-                    <ul>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pusta.png">
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Printed Chiffon Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <a href="#a">
-                    <img src="../../images/arrival_4.png">
-                </a>
-                <div class="head">
+                <div class="col">
                     <a href="#a">
-                        <h2>Printed Chiffon Dress</h2>
+                        <img src="../../images/arrival_1.png">
                     </a>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Shiffon Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="body">
-                    <h3>£ 61.19</h3>
+                <div class="col">
                     <a href="#a">
-                        <h4>Add to cart</h4>
+                        <img src="../../images/arrival_3.png">
                     </a>
-                    <ul>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pelna.png">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#a">
-                                <img src="../../images/gwiazda_pusta.png">
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="head">
+                        <a href="#a">
+                            <h2>Awesome Dress</h2>
+                        </a>
+                    </div>
+                    <div class="body">
+                        <h3>£ 61.19</h3>
+                        <a href="#a">
+                            <h4>Add to cart</h4>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pelna.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#a">
+                                    <img src="../../images/gwiazda_pusta.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function openCity(evt, cityName) {
+
+        document.getElementById("Paris").hidden;
+        document.getElementById("Tokyo").hidden;
+
+        var i, tabcontent, tablinks;
+
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
     <div class="blog-box">
     <div class="holder">
         <div class="box">
@@ -653,7 +1029,7 @@
 
                         <form action="/action_page.php">
                             <input name="firstname" type="text" placeholder="hello@psdfreebies.com">
-                            <input type="submit" placeholder="Submit">
+                            <input type="submit" value="Submit">
                         </form>
                         
                     </div>
