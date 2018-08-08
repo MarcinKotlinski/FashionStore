@@ -108,5 +108,23 @@
                 }
             }
         }
+
+        .component-slider {
+            width: 575px;
+            overflow: hidden;
+            position: relative;
+            margin: -62px 0 0;
+
+            .slides {
+                width: 999999px;
+                float: left;
+
+                li {
+                    width: 575px;
+                    overflow: hidden;
+                    float: left;
+                }
+            }
+        }
     }
 }

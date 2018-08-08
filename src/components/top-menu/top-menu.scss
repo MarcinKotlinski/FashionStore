@@ -2,170 +2,173 @@
 @import "../../style/partials/variables";
 
 .top-menu {
-    .row {
-        content: "";
-        display: table;
-        clear: both;
-        width: 100%;
+  .row {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+  }
+
+  .column {
+    @include top_columns;
+
+    float: left;
+    padding: 15px 0;
+    width: 33%;
+    text-transform: uppercase;
+    border: 1px solid $border;
+    border-left: none;
+
+    a {
+      color: $topColumn;
     }
 
-    .column {
-        @include top_columns;
+    a:hover {
+      color: $topColumn;
+    }
+  }
 
-        float: left;
-        padding: 15px 0;
-        width: 33%;
-        text-transform: uppercase;
-        border: 1px solid $border;
-        border-left: none;
+  #logo-line {
+    display: table;
+    width: 100%;
 
-        a {
-            color: $topColumn;
-        }
-
-        a:hover {
-            color: $topColumn;
-        }
+    .logo {
+      padding: 25px;
+      background: #fff;
+      float: left;
+      margin-right: 50px;
+      position: absolute;
     }
 
-    #logo-line {
-        display: table;
-        width: 100%;
+    .search-engine {
+      float: left;
+      margin-top: 40px;
+      padding-right: 0;
+      margin-bottom: 41px;
+      border: 1px solid $border;
+      margin-left: 305px;
+      font-weight: lighter;
+      color: $darker-words;
 
-        .logo {
-            padding: 25px;
-            background: #fff;
-            float: left;
-            margin-right: 50px;
-            position: absolute;
-        }
-
-        .search-engine {
-            float: left;
-            margin-top: 40px;
-            padding-right: 0;
-            margin-bottom: 41px;
-            border: 1px solid $border;
-            margin-left: 305px;
-            font-weight: lighter;
-            color: $darker-words;
-
-            input[list=browsers] {
-                font-size: 15px;
-                padding: 5px 15px;
-                width: 163px;
-                border: none;
-            }
-
-            input[type=text] {
-                font-size: 15px;
-                width: 250px;
-                padding: 13px 28px;
-                border-top: none;
-                border-bottom: none;
-                border-left: none;
-                border-color: $border;
-            }
-
-            input[type=submit] {
-                background: url("../../images/lupa.png");
-                font-size: 15px;
-                padding: 13px 28px;
-                background: $red;
-                color: #fff;
-            }
-
-            ul {
-                li {
-                    @include top_columns;
-
-                    display: inline;
-                }
-
-                li:first-child:after {
-                    content: "|";
-                    margin-left: 240px;
-                    margin-right: 30px;
-                }
-
-                li:nth-child(2):after {
-                    content: url("../../images/rozwinięcie.png");
-                    margin-left: 40px;
-                    margin-right: 30px;
-                }
-
-                li:nth-child(3) {
-                    padding: 22px 30px;
-                    background: $red;
-                }
-
-                li:nth-child(3):hover {
-                    background: red;
-                }
-            }
-        }
-        .socials{
-            margin: 52px 0;
-            ul{
-                li{
-                    display: inline;
-                    padding: 10px;
-                    border: 1px solid #696969;
-                    border-radius: 200px;
-                }
-            }
-        }
-    }
-
-    .tab {
-        overflow: hidden;
-        background-color: #000;
-    }
-
-    /* Style the buttons inside the tab */
-    .tab button {
-        @include gotham_medium;
-
-        margin-right: 29px;
-        background-color: inherit;
-        color: #fff;
-        text-transform: uppercase;
-        float: left;
+      input[list=browsers] {
+        font-size: 15px;
+        padding: 5px 15px;
+        width: 163px;
         border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        transition: 0.3s;
-    }
+      }
 
-    .last {
-        margin-left: 40px;
-        background-color: $red !important;
-        text-transform: none;
-    }
-
-    .last {
-        button:hover {
-            background-color: red !important;
-        }
-    }
-
-    /* Change background color of buttons on hover */
-    .tab {
-        button:hover {
-            border-bottom: 3px solid $red;
-        }
-
-        button.active {
-            border-bottom: 3px solid $red;
-        }
-    }
-
-    /* Style the tab content */
-    .tabcontent {
-        display: none;
-        padding: 6px 12px;
-        border: 1px solid #ccc;
+      input[type=text] {
+        font-size: 15px;
+        width: 250px;
+        padding: 13px 28px;
         border-top: none;
+        border-bottom: none;
+        border-left: none;
+        border-color: $border;
+      }
+
+      input[type=submit] {
+        background: url("../../images/lupa.png");
+        font-size: 15px;
+        padding: 13px 28px;
+        background: $red;
+        color: #fff;
+      }
+
+      ul {
+        li {
+          @include top_columns;
+
+          display: inline;
+        }
+
+        li:first-child:after {
+          content: "|";
+          margin-left: 240px;
+          margin-right: 30px;
+        }
+
+        li:nth-child(2):after {
+          content: url("../../images/rozwinięcie.png");
+          margin-left: 40px;
+          margin-right: 30px;
+        }
+
+        li:nth-child(3) {
+          padding: 22px 30px;
+          background: $red;
+        }
+
+        li:nth-child(3):hover {
+          background: red;
+        }
+      }
     }
+    .socials {
+      margin: 52px 0;
+      ul {
+        li {
+          display: inline;
+          border: 1px solid #696969;
+          border-radius: 200px;
+          padding: 14px 14px;
+        }
+        li:first-child {
+          padding: 14px 17px;
+        }
+      }
+    }
+  }
+
+  .tab {
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    @include gotham_medium;
+
+    margin-right: 29px;
+    background-color: inherit;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+
+  .last {
+    margin-left: 40px;
+    background-color: $red !important;
+    text-transform: none;
+  }
+
+  .last {
+    button:hover {
+      background-color: red !important;
+    }
+  }
+
+  /* Change background color of buttons on hover */
+  .tab {
+    button:hover {
+      border-bottom: 3px solid $red;
+    }
+
+    button.active {
+      border-bottom: 3px solid $red;
+    }
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
 }

@@ -3,110 +3,133 @@
 
 .for-men {
 
-    .section-header{
-        float: left;
-    }
+  .section-header {
+    float: left;
+  }
 
-    .arrows{
+  .arrows {
+    float: right;
+
+    ul {
+      display: table;
+      float: right;
+      li {
         float: right;
+        margin: 10px;
+      }
+    }
+  }
 
-        ul{
-            display: table;
-            float: right;
-            li{
-                float: right;
-                margin: 10px;
-            }
-        }
+  //.slider {
+  //  width: 100%;
+  //  overflow: hidden;
+  //  position: relative;
+  //}
+  //
+  //.slider .mask {
+  //  width: 1185px;
+  //  height: 450px;
+  //  overflow: hidden;
+  //  position: relative;
+  //}
+  //
+  //.slider ul {
+  //  width: 99999px !important;
+  //  float: left;
+  //  transition: margin-left 500ms ease-in-out;
+  //}
+  //
+  //.slider ul li {
+  //  float: left;
+  //}
+
+  .men-row {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+    margin-bottom: 50px;
+
+    .col {
+      float: left;
+      width: 50%;
+
     }
 
-    .men-row {
-        content: "";
-        display: table;
-        clear: both;
-        width: 100%;
-        margin-bottom: 50px;
+    .left {
+      @include category_img;
 
-        .col {
+      h2 {
+        font-size: 40px;
+      }
+
+      h3 {
+        margin-bottom: 183px;
+        left: 40%;
+        color: #fff;
+      }
+    }
+
+    .right {
+      img {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        text-align: left;
+        color: $topColumn;
+      }
+
+      h2:hover {
+        color: red;
+        font-size: 16px;
+      }
+
+      .head {
+        margin: 0 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $border;
+      }
+
+      .body {
+        margin: 8px 8px;
+
+        h3 {
+          font-size: 20px;
+          text-align: left;
+          margin-bottom: 8px;
+        }
+
+        ul {
+          display: table;
+          float: left;
+          margin-top: 8px;
+
+          li {
             float: left;
-            width: 50%;
-            
+          }
+
+          li:hover {
+            content: url("../../images/gwiazda_pusta.png");
+          }
+
+          li:last-child:hover {
+            content: url("../../images/gwiazda_pelna.png");
+          }
         }
 
-        .left {
-            @include category_img;
-
-            h2 {
-                font-size: 40px;
-            }
-
-            h3 {
-                margin-bottom: 183px;
-                left: 40%;
-                color: #fff;
-            }
+        h4 {
+          float: right;
+          padding: 8px;
+          background: $red;
+          color: #fff;
+          font-weight: lighter;
         }
 
-        .right {
-            img {
-                margin-bottom: 20px;
-            }
-
-            h2 {
-                text-align: left;
-                color: $topColumn;
-            }
-
-            h2:hover{
-                color: red;
-                font-size: 16px;
-            }
-
-            .head {
-                margin: 0 8px;
-                padding-bottom: 8px;
-                border-bottom: 1px solid $border;
-            }
-
-            .body {
-                margin: 8px 8px;
-
-                h3 {
-                    font-size: 20px;
-                    text-align: left;
-                    margin-bottom: 8px;
-                }
-
-                ul{
-                    display: table;
-                    float: left;
-                    margin-top: 8px;
-
-                    li{
-                        float: left;
-                    }
-
-                    li:hover{
-                        content: url("../../images/gwiazda_pusta.png");
-                    }
-
-                    li:last-child:hover{
-                        content: url("../../images/gwiazda_pelna.png");
-                    }
-                }
-
-                h4{
-                    float: right;
-                    padding: 8px;
-                    background: $red;
-                    color: #fff;
-                    font-weight: lighter;
-                }
-
-                h4:hover{
-                    background: red;
-                }
-            }
+        h4:hover {
+          background: red;
         }
+      }
     }
+  }
 }
