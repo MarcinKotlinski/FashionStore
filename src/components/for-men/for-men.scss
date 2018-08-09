@@ -20,29 +20,6 @@
     }
   }
 
-  //.slider {
-  //  width: 100%;
-  //  overflow: hidden;
-  //  position: relative;
-  //}
-  //
-  //.slider .mask {
-  //  width: 1185px;
-  //  height: 450px;
-  //  overflow: hidden;
-  //  position: relative;
-  //}
-  //
-  //.slider ul {
-  //  width: 99999px !important;
-  //  float: left;
-  //  transition: margin-left 500ms ease-in-out;
-  //}
-  //
-  //.slider ul li {
-  //  float: left;
-  //}
-
   .men-row {
     content: "";
     display: table;
@@ -52,8 +29,6 @@
 
     .col {
       float: left;
-      width: 50%;
-
     }
 
     .left {
@@ -100,13 +75,17 @@
           margin-bottom: 8px;
         }
 
+        .stars{
         ul {
           display: table;
           float: left;
           margin-top: 8px;
+          margin-left: 0 !important;
 
           li {
             float: left;
+            width: 19px;
+            margin-left: 0;
           }
 
           li:hover {
@@ -117,7 +96,7 @@
             content: url("../../images/gwiazda_pelna.png");
           }
         }
-
+}
         h4 {
           float: right;
           padding: 8px;
@@ -128,6 +107,26 @@
 
         h4:hover {
           background: red;
+        }
+      }
+    }
+    .component-slider {
+      width: 575px;
+      overflow: hidden;
+      position: relative;
+      margin: -82px 0 0;
+
+      .slides {
+        width: 999999px;
+        float: left;
+
+        ul{
+          margin-left: 14px;
+        }
+        li {
+          width: 288px;
+          overflow: hidden;
+          float: left;
         }
       }
     }
