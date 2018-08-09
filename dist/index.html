@@ -500,10 +500,10 @@
                     <div class="arrows">
                         <ul>
                             <li>
-                                <a class="right" href="#"><img src="../../images/arrow_right_smaller.png" alt=""></a>
+                                <a class="right" href="#a"><img src="../../images/arrow_right_smaller.png" alt=""></a>
                             </li>
                             <li>
-                                <a class="left" href="#"><img src="../../images/arrow left_smaller.png" alt=""></a>
+                                <a class="left" href="#a"><img src="../../images/arrow left_smaller.png" alt=""></a>
                             </li>
                         </ul>
                     </div>
@@ -532,11 +532,11 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
+
     <div class="goods-block">
     <div class="holder">
         <div class="section-header">
@@ -554,20 +554,6 @@
                 <li>
                     <a href="#a" class="tablinks" onclick="openCity(event, 'Tokyo')">
                         <h2>pupular</h2>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="arrows">
-            <ul>
-                <li>
-                    <a href="#a">
-                        <img src="../../images/arrow_right_smaller.png" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="#a">
-                        <img src="../../images/arrow left_smaller.png" alt="">
                     </a>
                 </li>
             </ul>
@@ -1212,7 +1198,6 @@
 </footer>
 </div>
 <script src="js/main.js"></script>
-</body>
 <script>
     function slideGallery() {
         var slideGallery = document.querySelector('.component-slider'); // slider div container
@@ -1244,7 +1229,7 @@
 
         // slide to prev
         function slideRight() {
-            if (currentSlide != 0) {
+            if (currentSlide !== 0) {
                 currentSlide--;
             }
             else {
@@ -1261,7 +1246,7 @@
             }, 500, function() {
                 setActiveClass();
             });
-            // slidesList.style.marginLeft = offset;
+            slidesList.style.marginLeft = offset;
         }
 
         // set active class for slide element
@@ -1288,20 +1273,22 @@
 
         // adding buttons event handlers
         slideGallery.querySelector('.arrows .right').addEventListener("click", function (event) {
+            console.log("prawo");
             event.preventDefault();
             slideLeft();
         });
         slideGallery.querySelector('.arrows .left').addEventListener("click", function (event) {
+            console.log("lewo");
             event.preventDefault();
             slideRight();
         });
     }
 
-
     window.onload = function () {
         // slide gallery
         slideGallery();
     };
-
 </script>
+</body>
+
 </html>

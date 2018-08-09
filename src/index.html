@@ -16,7 +16,6 @@
     @@include('./template/footer.html')
 </div>
 <script src="js/main.js"></script>
-</body>
 <script>
     function slideGallery() {
         var slideGallery = document.querySelector('.component-slider'); // slider div container
@@ -48,7 +47,7 @@
 
         // slide to prev
         function slideRight() {
-            if (currentSlide != 0) {
+            if (currentSlide !== 0) {
                 currentSlide--;
             }
             else {
@@ -65,7 +64,7 @@
             }, 500, function() {
                 setActiveClass();
             });
-            // slidesList.style.marginLeft = offset;
+            slidesList.style.marginLeft = offset;
         }
 
         // set active class for slide element
@@ -92,20 +91,22 @@
 
         // adding buttons event handlers
         slideGallery.querySelector('.arrows .right').addEventListener("click", function (event) {
+            console.log("prawo");
             event.preventDefault();
             slideLeft();
         });
         slideGallery.querySelector('.arrows .left').addEventListener("click", function (event) {
+            console.log("lewo");
             event.preventDefault();
             slideRight();
         });
     }
 
-
     window.onload = function () {
         // slide gallery
         slideGallery();
     };
-
 </script>
+</body>
+
 </html>
