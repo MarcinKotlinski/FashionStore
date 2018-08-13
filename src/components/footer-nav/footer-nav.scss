@@ -1,0 +1,31 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
+.footer-nav {
+  .right {
+    width: 63%;
+
+    .column_inside {
+      width: 33%;
+      float: left;
+
+      @include footer_ul;
+    }
+  }
+
+  .row_footer {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+    padding-top: 30px;
+
+    a {
+      color: $topColumn;
+    }
+
+    a:hover {
+      color: red;
+    }
+  }
+}

@@ -1,71 +1,26 @@
-@import "../../style/partials/mixins";
-@import "../../style/partials/variables";
+.top-block{
+  .row {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+  }
+  .column {
+    @include top_columns;
 
-.top-block {
-    .fast-list {
-        display: table;
-        width: 100%;
-        margin-bottom: 50px;
+    float: left;
+    padding: 15px 0;
+    width: 33%;
+    text-transform: uppercase;
+    border: 1px solid $border;
+    border-left: none;
 
-        ul {
-            li {
-                display: inline;
-                a{
-                    color: $topColumn;
-                }
-                a:hover{
-                    color: red;
-                }
-            }
-
-            li:after {
-                content: ':';
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-
-            li:last-child:after {
-                content: none;
-            }
-
-            li:first-child:after {
-                content: url("../../images/next.png");
-            }
-
-            li:first-child:hover{
-                a{
-                color: $topColumn;
-                }
-            }
-        }
+    a {
+      color: $topColumn;
     }
 
-    .flex-container {
-        display: flex;
-        flex-wrap: nowrap;
-        margin-bottom: 127px;
-
-        #first, #second, #third {
-            width: 100%;
-            height: auto;
-            margin: 10px;
-            text-align: center;
-
-            a{
-                color: #fff;
-            }
-        }
-
-        #first {
-            @include category_img;
-        }
-
-        #second {
-            @include category_img;
-        }
-
-        #third {
-            @include category_img;
-        }
+    a:hover {
+      color: $topColumn;
     }
+  }
 }

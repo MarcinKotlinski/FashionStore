@@ -1,0 +1,14 @@
+.socials {
+  margin: 52px 0;
+  ul {
+    li {
+      display: inline;
+      border: 1px solid #696969;
+      border-radius: 200px;
+      padding: 14px 14px;
+    }
+    li:first-child {
+      padding: 14px 17px;
+    }
+  }
+}

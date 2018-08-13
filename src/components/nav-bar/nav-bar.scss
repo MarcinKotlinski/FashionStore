@@ -1,0 +1,56 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
+.nav-bar{
+  .tab {
+    overflow: hidden;
+    background-color: #000;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    @include gotham_medium;
+
+    margin-right: 29px;
+    background-color: inherit;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+
+  .last {
+    margin-left: 40px;
+    background-color: $red !important;
+    text-transform: none;
+  }
+
+  .last {
+    button:hover {
+      background-color: red !important;
+    }
+  }
+
+  /* Change background color of buttons on hover */
+  .tab {
+    button:hover {
+      border-bottom: 3px solid $red;
+    }
+
+    button.active {
+      border-bottom: 3px solid $red;
+    }
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+}

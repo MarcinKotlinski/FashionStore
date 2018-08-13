@@ -1,0 +1,41 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
+.signup-form{
+  .sign_bar {
+    display: table;
+    width: 100%;
+    clear: both;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $border;
+
+    .col_left {
+      width: 30%;
+      float: left;
+
+      a {
+        text-transform: uppercase;
+        font-size: 20px;
+        float: left;
+        margin-right: 15px;
+      }
+
+      a:hover {
+        color: $topColumn;
+      }
+    }
+
+    input[type=text], select {
+      font-size: 15px;
+      padding: 13px 28px;
+      background: $border;
+    }
+
+    input[type=submit], select {
+      font-size: 15px;
+      padding: 13px 14px;
+      background: $red;
+      color: #fff;
+    }
+  }
+}

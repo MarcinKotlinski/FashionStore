@@ -1,0 +1,11 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
+.copyright{
+  h2 {
+    text-align: center;
+    font-size: 13px;
+    font-weight: lighter;
+    margin-bottom: 46px;
+  }
+}

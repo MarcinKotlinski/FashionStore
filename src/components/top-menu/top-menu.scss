@@ -2,37 +2,11 @@
 @import "../../style/partials/variables";
 
 .top-menu {
-  .row {
-    content: "";
-    display: table;
-    clear: both;
-    width: 100%;
-  }
-
-  .column {
-    @include top_columns;
-
-    float: left;
-    padding: 15px 0;
-    width: 33%;
-    text-transform: uppercase;
-    border: 1px solid $border;
-    border-left: none;
-
-    a {
-      color: $topColumn;
-    }
-
-    a:hover {
-      color: $topColumn;
-    }
-  }
-
   #logo-line {
     display: table;
     width: 100%;
 
-    .logo {
+    .main-logo {
       padding: 25px;
       background: #fff;
       float: left;
@@ -40,7 +14,7 @@
       position: absolute;
     }
 
-    .search-engine {
+    .product-search {
       float: left;
       margin-top: 40px;
       padding-right: 0;
@@ -68,7 +42,6 @@
       }
 
       input[type=submit] {
-        background: url("../../images/lupa.png");
         font-size: 15px;
         padding: 13px 28px;
         background: $red;
@@ -118,57 +91,5 @@
         }
       }
     }
-  }
-
-  .tab {
-    overflow: hidden;
-    background-color: #000;
-  }
-
-  /* Style the buttons inside the tab */
-  .tab button {
-    @include gotham_medium;
-
-    margin-right: 29px;
-    background-color: inherit;
-    color: #fff;
-    text-transform: uppercase;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-  }
-
-  .last {
-    margin-left: 40px;
-    background-color: $red !important;
-    text-transform: none;
-  }
-
-  .last {
-    button:hover {
-      background-color: red !important;
-    }
-  }
-
-  /* Change background color of buttons on hover */
-  .tab {
-    button:hover {
-      border-bottom: 3px solid $red;
-    }
-
-    button.active {
-      border-bottom: 3px solid $red;
-    }
-  }
-
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
   }
 }

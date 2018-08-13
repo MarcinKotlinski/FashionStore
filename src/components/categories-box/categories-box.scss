@@ -1,0 +1,31 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 127px;
+
+  #first, #second, #third {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+
+    a{
+      color: #fff;
+    }
+  }
+
+  #first {
+    @include category_img;
+  }
+
+  #second {
+    @include category_img;
+  }
+
+  #third {
+    @include category_img;
+  }
+}

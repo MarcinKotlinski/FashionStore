@@ -1,0 +1,63 @@
+.product-search {
+  float: left;
+  margin-top: 40px;
+  padding-right: 0;
+  margin-bottom: 41px;
+  border: 1px solid $border;
+  margin-left: 305px;
+  font-weight: lighter;
+  color: $darker-words;
+
+  input[list=browsers] {
+    font-size: 15px;
+    padding: 5px 15px;
+    width: 163px;
+    border: none;
+  }
+
+  input[type=text] {
+    font-size: 15px;
+    width: 250px;
+    padding: 13px 28px;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-color: $border;
+  }
+
+  input[type=submit] {
+    font-size: 15px;
+    padding: 13px 28px;
+    background: $red;
+    color: #fff;
+  }
+
+  ul {
+    li {
+      @include top_columns;
+
+      display: inline;
+    }
+
+    li:first-child:after {
+      content: "|";
+      margin-left: 240px;
+      margin-right: 30px;
+    }
+
+    li:nth-child(2):after {
+      content: url("../../images/rozwinięcie.png");
+      margin-left: 40px;
+      margin-right: 30px;
+    }
+
+    li:nth-child(3) {
+      padding: 22px 30px;
+      background: $red;
+    }
+
+    li:nth-child(3):hover {
+      background: red;
+    }
+  }
+}
