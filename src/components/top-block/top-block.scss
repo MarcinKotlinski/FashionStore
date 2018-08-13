@@ -1,3 +1,6 @@
+@import "../../style/partials/mixins";
+@import "../../style/partials/variables";
+
 .top-block{
   .row {
     content: "";
@@ -20,7 +23,22 @@
     }
 
     a:hover {
-      color: $topColumn;
+      color: $red;
+    }
+  }
+  .wozek{
+    a:before{
+      content: url("../../images/wozek.png");
+    }
+  }
+  .dolar{
+    a:before{
+      content: url("../../images/dolar.png");
+    }
+  }
+  .zegar{
+    a:before{
+      content: url("../../images/zegar.png");
     }
   }
 }
